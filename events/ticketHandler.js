@@ -137,8 +137,8 @@ async function handleSelectMenu(interaction, client) {
             iconURL: ticketIcons.modIcon,
             url: "https://discord.gg/xQF9f9yUEM"
         })
-        .setDescription(`Hello ${user}, welcome to our support!\n- Please provide a detailed description of your issue\n- Our support team will assist you as soon as possible.\n- Feel free to open another ticket if this was closed.`)
-        .setFooter({ text: 'Your satisfaction is our priority', iconURL: ticketIcons.heartIcon })
+        .setDescription(`สวัสดี ${user}, ยินดีต้อนรับเข้าสู่การสนับสนุนของเรา!\n- กรุณาให้คำอธิบายปัญหาของคุณโดยละเอียด\n- ทีมสนับสนุนของเราจะช่วยเหลือคุณโดยเร็วที่สุด\n- โปรดอย่าลังเลที่จะเปิดตั๋วอีกใบหากตั๋วนี้ถูกปิด`)
+        .setFooter({ text: 'ความพึงพอใจของคุณคือสิ่งสำคัญที่สุดของเรา', iconURL: ticketIcons.heartIcon })
         .setColor('#00FF00')
         .setTimestamp();
 
@@ -158,15 +158,15 @@ async function handleSelectMenu(interaction, client) {
             iconURL: ticketIcons.correctIcon,
             url: "https://discord.gg/xQF9f9yUEM"
         })
-        .setDescription(`- Your ${ticketType} ticket has been created.`)
+        .setDescription(`- ตอนนี้ ${ticketType} ตั๋วได้ถูกสร้างขึ้นแล้ว`)
         .addFields(
             { name: 'Ticket Channel', value: `${ticketChannel.url}` },
-            { name: 'Instructions', value: 'Please describe your issue in detail.' }
+            { name: 'Instructions', value: 'โปรดอธิบายปัญหาของคุณโดยละเอียด' }
         )
         .setTimestamp()
-        .setFooter({ text: 'Thank you for reaching out!', iconURL: ticketIcons.modIcon });
+        .setFooter({ text: 'ขอบคุณสำหรับการติดต่อ!', iconURL: ticketIcons.modIcon });
 
-    await user.send({ content: `Your ${ticketType} ticket has been created`, embeds: [embed] });
+    await user.send({ content: `ตอนนี้ ${ticketType} ตั๋วได้รับการสร้างขึ้นแล้ว`, embeds: [embed] });
 
     interaction.followUp({ content: 'Ticket created!', ephemeral: true });
 }
@@ -201,9 +201,9 @@ async function handleCloseButton(interaction, client) {
                 iconURL: ticketIcons.correctrIcon,
                 url: "https://discord.gg/xQF9f9yUEM"
             })
-            .setDescription(`- Your ticket has been closed.`)
+            .setDescription(`- ตั๋วของคุณถูกปิดแล้ว`)
             .setTimestamp()
-            .setFooter({ text: 'Thank you for reaching out!', iconURL: ticketIcons.modIcon });
+            .setFooter({ text: 'ขอบคุณสำหรับการติดต่อ!', iconURL: ticketIcons.modIcon });
 
         await ticketUser.send({ content: `Your ticket has been closed.`, embeds: [embed] });
     }
