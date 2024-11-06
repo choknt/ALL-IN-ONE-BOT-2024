@@ -57,15 +57,15 @@ async function monitorConfigChanges(client) {
           
                     const embed = new EmbedBuilder()
                         .setAuthor({
-                            name: "Welcome to Ticket Support",
+                            name: "ยินดีต้อนรับสู่การสนับสนุนตั๋ว",
                             iconURL: ticketIcons.mainIcon,
                             url: "https://discord.gg/xQF9f9yUEM"
                         })
-                        .setDescription('- Please click below menu to create a new ticket.\n\n' +
-                            '**Ticket Guidelines:**\n' +
-                            '- Empty tickets are not permitted.\n' +
-                            '- Please be patient while waiting for a response from our support team.')
-                        .setFooter({ text: 'We are here to Help!', iconURL: ticketIcons.modIcon })
+                        .setDescription('- กรุณาคลิกเมนูด้านล่างเพื่อสร้างตั๋วใหม่\n\n' +
+                            '**แนวทางการเปืดตั๋ว:**\n' +
+                            '- ไม่อนุญาตให้มีตั๋วเปล่า\n' +
+                            '- โปรดอดทนรอการตอบกลับจากทีมสนับสนุนของเรา')
+                        .setFooter({ text: 'เราอยู่ที่นี่เพื่อช่วยเหลือคุณ!', iconURL: ticketIcons.modIcon })
                         .setColor('#00FF00')
                         .setTimestamp();
 
