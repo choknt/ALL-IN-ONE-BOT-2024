@@ -73,10 +73,9 @@ async function monitorConfigChanges(client) {
                         .setCustomId('select_ticket_type')
                         .setPlaceholder('Choose ticket type')
                         .addOptions([
-                            { label: '🆘 Support', value: 'support' },
-                            { label: '📂 Suggestion', value: 'suggestion' },
-                            { label: '💜 Feedback', value: 'feedback' },
-                            { label: '⚠️ Report', value: 'report' }
+                            { label: '🆘 สนับสนุน', value: 'support' },
+                            { label: '💜 ข้อเสนอแนะ', value: 'feedback' },
+                            { label: '⚠️ รายงาน', value: 'report' }
                         ]);
 
                     const row = new ActionRowBuilder().addComponents(menu);
